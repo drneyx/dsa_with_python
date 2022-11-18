@@ -14,3 +14,10 @@ def verify(index):
     else:
         print("Item not found")
 
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+result = linear_search(numbers, 12)
+ver = verify(result)
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+result = linear_search(numbers, 7)
+ver = verify(result)
