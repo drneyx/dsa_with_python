@@ -37,3 +37,21 @@ class LinkedList:
         new_node = Node(data)
         new_node.next_node = self.head
         self.head = new_node
+    
+    def __repr__(self):
+        """
+         Return a string representaiotns of the list takes O(n) time
+        """
+
+        nodes = []
+        current = self.head
+
+        while current:
+            if current is not self.head:
+                nodes.append("[Head: %s]" % current.data)
+            elif current.next_node is None:
+                nodes.append("[Tail: %s]" % current.data)
+            else:
+                nodes.append("[%s]" % current.data)
+            
+            current =  current.next_node
