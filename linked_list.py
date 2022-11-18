@@ -18,5 +18,22 @@ class LinkedList:
         return self.head == None
     
     def size(self):
+        """
+        Returns the number of elements in list
+        """
         current = self.head
         count = 0
+
+        while current:
+            count += 1
+            current = current.next_node
+        
+        return count
+    
+    def add(self, data):
+        """
+        Adds new Node containing data at head of the list
+        """
+        new_node = Node(data)
+        new_node.next_node = self.head
+        self.head = new_node
