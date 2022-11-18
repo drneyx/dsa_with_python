@@ -6,4 +6,10 @@ class Node:
         self.data = data
     
     def __repr__(self):
-        
+        return "<Node data: %s>" % self.data
+
+
+class LinkedList:
+
+    def __init__(self):
+        self.head = None
