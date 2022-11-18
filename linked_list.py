@@ -16,3 +16,7 @@ class LinkedList:
 
     def is_empty(self):
         return self.head == None
+    
+    def size(self):
+        current = self.head
+        count = 0
