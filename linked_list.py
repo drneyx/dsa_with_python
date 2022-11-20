@@ -38,6 +38,16 @@ class LinkedList:
         new_node.next_node = self.head
         self.head = new_node
     
+
+    def search(self, key):
+        current = self.head
+
+        while current:
+            if current.data == key:
+                return current
+            else:
+                current = current.next_node
+    
     def __repr__(self):
         """
          Return a string representaiotns of the list takes O(n) time
@@ -55,3 +65,4 @@ class LinkedList:
                 nodes.append("[%s]" % current.data)
             
             current =  current.next_node
+        return '-> '.join(nodes)
