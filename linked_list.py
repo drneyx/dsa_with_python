@@ -65,6 +65,16 @@ class LinkedList:
             position = index
             current = self.head
 
+            while position > 1:
+                current = node.next_node
+                position -= 1
+
+            prev = current
+            next = current.next_node
+
+            prev.next_node = new
+            new.next_node = next
+
 
     def __repr__(self):
         """
@@ -84,3 +94,35 @@ class LinkedList:
             
             current =  current.next_node
         return '-> '.join(nodes)
+
+
+
+def cube_num(nums):
+    for i in nums:
+        yield(i*i*i)
+
+num_set = cube_num([1,2,3,4,5])
+res = num_set
+
+
+nums = [2,7,11,15]
+target=9
+d={}
+
+for i in range(len(nums)):
+    if(target-nums[i] in d):
+        print([d[target-nums[i]], i])
+    else:
+        d[nums[1]]=i
+
+
+def Taple(tuple, t):
+    val = 0
+    
+    for tup in tuple:
+        if (tup == t):
+            val += 1
+    print(val)
+    print(tuple)
+
+tuple = (1,1,2,2,5)
